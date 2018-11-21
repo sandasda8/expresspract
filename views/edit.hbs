@@ -1,0 +1,71 @@
+<div class="log-form">
+	{{#record}}
+	<h1>"{{this.workNumber}}" bejegyzés szerkesztése</h1>
+
+	<form action="/edit/workname/{{this.id}}" method="post">
+		<input type="text" name="workNumber" value={{this.workNumber}} />
+		<button type="submit" class="material-icons">done</button><br>
+	</form>
+
+	<form action="/edit/shortNote/{{this.id}}" method="post">
+		<input type="text" name="shortNote" placeholder={{this.shortNote}} />
+		<button type="submit" class="material-icons">done</button><br>
+	</form>
+
+<form action="/edit/note/{{this.id}}" method="post">
+		<input type="text" name="note" placeholder={{this.note}} />
+		<button type="submit" class="material-icons">done</button><br>
+	</form>
+	
+	<form action="/edit/timeStamp/{{this.id}}" method="post">
+		<input type="date" name="timeStamp" value="{{this.timeStamp}}">
+		<button type="submit" class="material-icons">done</button><br>
+	</form>
+		
+	<form action="/edit/upload" method="post" encType="multipart/form-data">
+		<input type="hidden" name="workId" value={{this.id}} />
+		<input type="file" name="imgFile" id="imgFile" class="inputfile" />
+		<label for="imgFile" class="material-icons">file_copy</label>
+		<button type="submit" class="material-icons">done</button>
+	</form>
+
+	<form action="/list" method="get">
+		<button type="submit" class="material-icons">reply</button>
+	</form>
+	<form action="/edit/delete/{{this.id}}" method="get">
+		<button type="submit" class="material-icons" onclick="return confirm('Biztos véglegesen törölni szeretnéd ezt a bejegyzést?');">delete_forever</button>
+	</form>
+</div>
+
+<h1>Költségek</h1>
+
+	<form action="/edit/updateCalculator" method="post">
+		<input type="hidden" name="workId" value={{this.id}} />
+		<input type="text" name="value" placeholder="Összeg" />
+		<input type="text" name="spentFor" placeholder="Mire" /><br>
+		<button type="submit" class="material-icons">get_app</button>
+	</form>
+	<h1>Végösszeg: {{this.total}} Ft.</h1>
+	{{/record}}
+	<table>
+	<thead>
+		<th>Összeg (Ft.)</th> 
+		<th>Mire</th>
+	</thead>
+	<tbody> 
+		{{#expenses}}
+    <tr>
+	<td>{{@index}}</td>
+	<td>{{this.value}}</td>
+  <td>{{this.spentFor}}</td>
+	<form action="/edit/deleteValue/{{this.id}}" method="get">
+	<td> <button type="submit" class="material-icons">delete</button> </td>
+	</form>
+    </tr>
+		{{/expenses}}
+</tbody> 
+</table>
+{{#record}}
+<h1>Feltöltött képek</h1>
+<embed src="/edit/images/{{uploadRoute}}" width="100%" height="880px" />
+{{/record}}

@@ -1,0 +1,89 @@
+body {
+    font: 15px arial,sans-serif;
+    background: url(http://localhost:3000/coverImage) no-repeat center center fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+h1 {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    font-size: 24px;
+    background-color: black;
+    color: #c3c5c9;
+    text-align: center;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+	background: black;
+	padding: 8px 15px 8px 15px;
+    border-style: outset;
+    border-width: 2px;
+    border-color: grey;
+	color: white;
+}
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background: black;
+    color: rgb(255, 217, 0);
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+button {
+	background: black;
+	padding: 8px 13px 8px 13px;
+    border-style: outset;
+    border-width: 2px;
+    border-color: grey;
+	color: white;
+}
+button:hover{
+    background: black;
+    color: red;
+}
+button:active {
+    background: black;
+	padding: 8px 15px 8px 15px;
+    border-style: inset;
+    border-width: 2px;
+    border-color: grey;
+	color: red;
+}
+table {
+    margin: auto;
+    position: relative;
+}
+th, td {
+    border: 2px solid black;
+}
+th {
+    background: #c3c5c9;
+}
+tr {
+    background: #c3c5c9;
+}
+tr:nth-child(odd) {
+    background: #eee;
+}
+td a {
+    color:#000;
+    text-decoration: underline;
+}
+input {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.search_form {
+    
+}

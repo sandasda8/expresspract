@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    background: url(http://sf.co.ua/2012/wallpaper-1850864.jpg) no-repeat center center fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+.newRec {
+    position: relative;
+    left: 95%
+}
+h1 {
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    font-size: 24px;
+    background-color: black;
+    color: #c3c5c9;
+    text-align: center;
+}
+table {
+    margin: auto;
+    position: relative;
+
+}
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+}
+th {
+    background: #c3c5c9;
+}
+tr {
+    background: #c3c5c9;
+}
+tr:nth-child(odd) {
+    background: #eee;
+}
+td {
+    color:#000;
+    text-align: center;
+    font-size: 16px;
+}
+button {
+    border-radius: 8px;
+	background: black;
+	padding: 8px 12px 8px 12px;
+    border-style: outset;
+    border-width: 2px;
+    border-color: grey;
+	color: white;
+}
+button:hover{
+    background: black;
+    color: red;
+}
+button:active {
+    background: black;
+    padding: 8px 13px 8px 13px;
+    border-radius: 8px;
+    border-style: inset;
+    border-width: 2px;
+    border-color: grey;
+	color: red;
+}
+input {
+    align-content: center;
+    padding: 12px 10px 12px 10px;
+    margin: 8px 8px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+.search_form{
+
+}
+
+  

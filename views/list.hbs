@@ -1,0 +1,54 @@
+<h1>Keresés</h1>
+
+	<form action="/list/search" method="post">
+	<input type="text" name="search" placeholder="Munkajegyszám" />
+	<button type="submit" class="material-icons">search</button>
+	</form>
+
+<div class="newRec">
+	<form action="/new" method="get">
+	<button type="newRecord" class="material-icons">add_to_photos</button>
+	</form>
+</div>
+<h1>Folyamatban</h1>
+<table>
+	<thead>
+  <th>Munkajegyszám</th>
+	<th>Rövid Leírás</th>
+	<th>Hozzáadás Dátuma</th>
+	</thead>
+<tbody> 
+  {{#falseRow}}
+    <tr> 
+			<td>{{this.workNumber}}</td>
+      <td>{{this.shortNote}}</td>
+			<td>{{this.timeStamp}}</td>
+			<td> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
+			<button type="submit" class="material-icons">done</button> </form> </div> </td>
+			<td> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
+			<button type="submit" class="material-icons">view_list</button> </form> </div> </td>
+    </tr>
+  {{/falseRow}} 
+</tbody> 
+</table>
+<h1>Kész</h1>
+<table>
+	<thead> 
+  <th>Munkajegyszám</th>
+	<th>Rövid Leírás</th>
+	<th>Hozzáadás dátuma</th>
+	</thead>
+<tbody> 
+  {{#trueRow}}
+    <tr> 
+			<td>{{this.workNumber}}</td>
+      <td>{{this.shortNote}}</td>
+			<td>{{this.timeStamp}}</td>
+			<td> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
+			<button type="submit" class="material-icons">cached</button> </form> </div> </td>
+			<td> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
+			<button type="submit" class="material-icons">view_list</button> </form> </div> </td>
+    </tr>
+  {{/trueRow}} 
+</tbody> 
+</table>
