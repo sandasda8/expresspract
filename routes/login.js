@@ -5,8 +5,9 @@ router.get('/', function(req, res, next){
     res.render('login', { title: 'Login', layout: 'loginLayout' });
 });
 
-router.get('/coverImage', function(req, res, next){
-	res.sendFile('/home/sanda/Desktop/testapp/public/images/cover.jpg')
+router.get('/image/:which', function(req, res, next){
+	var which = req.params['which'];
+	res.sendFile('/home/sanda/Desktop/testapp/public/images/'+which);
 });
 
 router.post('/login', function(req, res, next) {
