@@ -1,6 +1,6 @@
 body {
-    font: 15px arial,sans-serif;
-    background: url(http://localhost:3000/coverImage) no-repeat center center fixed;
+    font: 15px arial;
+    background: url(http://sf.co.ua/2012/wallpaper-1850864.jpg) no-repeat center center fixed;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
 }
 h1 {
@@ -8,8 +8,17 @@ h1 {
     padding: 5px;
     font-size: 24px;
     background-color: black;
-    color: #c3c5c9;
+    color: grey;
     text-align: center;
+    border: 1px solid grey;
+}
+h1.total {
+    background-color: grey;
+    color: rgb(180, 3, 3);
+    border: 1px solid black;
+}
+a {
+    color: black;
 }
 .inputfile {
 	width: 0.1px;
@@ -19,64 +28,74 @@ h1 {
 	position: absolute;
 	z-index: -1;
 }
-.inputfile + label {
-	background: black;
-	padding: 8px 15px 8px 15px;
+label {
+    margin: 8px 8px;
+    background: black;
+    padding: 8px 68px 8px 68px;
+    border-radius: 5px;
     border-style: outset;
     border-width: 2px;
     border-color: grey;
-	color: white;
-}
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background: black;
-    color: rgb(255, 217, 0);
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
+	color: white;  
 }
 button {
+    border-radius: 5px;
 	background: black;
-	padding: 8px 13px 8px 13px;
+	padding: 8px 12px 8px 12px;
     border-style: outset;
     border-width: 2px;
     border-color: grey;
 	color: white;
 }
-button:hover{
+#red:hover{
     background: black;
     color: red;
 }
+#green:hover{
+    background: black;
+    color: green;
+}
+#blue:hover{
+    background: black;
+    color: blue;
+}
+#yellow:hover{
+    background: black;
+    color: yellow;
+}
 button:active {
     background: black;
-	padding: 8px 15px 8px 15px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 5px;
     border-style: inset;
     border-width: 2px;
     border-color: grey;
-	color: red;
+	color: white;
 }
 table {
     margin: auto;
     position: relative;
 }
+table.butts {
+    margin: auto;
+    position: relative;
+    right: 45%;
+}
 th, td {
-    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: grey;
+    border: 1px solid black;
+    text-align: center;
 }
-th {
-    background: #c3c5c9;
+td {
+ background-color: white;
 }
-tr {
-    background: #c3c5c9;
+td.clean, th.clean {
+    border: 0;
+    background-color: transparent;
 }
-tr:nth-child(odd) {
-    background: #eee;
-}
-td a {
-    color:#000;
-    text-decoration: underline;
-}
-input {
-    width: 20%;
+input, textarea {
     padding: 12px 20px;
     margin: 8px 8px;
     display: inline-block;
@@ -84,6 +103,6 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
 }
-.search_form {
-    
+textarea.short {
+    resize: none;
 }

@@ -22,7 +22,7 @@ connection.query("SELECT * FROM tickets WHERE id = ?", [idParam], function (err,
 			for (i = 0; i < row2.length; i++) {
 				total += row2[i].value;
 			}
-			res.render('edit', { title: 'Szerkesztés', layout: 'editLayout', record: row, expenses: row2, total });
+			res.render('edit', { title: 'Szerkesztés', layout: 'editLayout', record: row, expenses: row2, total: total });
 		});
 	});
 });

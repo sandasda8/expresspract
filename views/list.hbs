@@ -1,21 +1,29 @@
 <h1>Keresés</h1>
-
+<table><tbody>
+<tr>
 	<form action="/list/search" method="post">
-	<input type="text" name="search" placeholder="Munkajegyszám" />
-	<button type="submit" class="material-icons">search</button>
+	<td class="clean"><input type="text" name="search" placeholder="Munkajegyszám" style="width: 165px;"/></td>
+	<td class="clean"><button id="yellow" type="submit" class="material-icons">search</button></td>
 	</form>
-
-<div class="newRec">
+</tr>
+</tbody></table>
+<table class="butts"><thead>
 	<form action="/new" method="get">
-	<button type="newRecord" class="material-icons">add_to_photos</button>
+	<th class="clean"><button id="blue" type="newRecord" class="material-icons">add_to_photos</button></th>
 	</form>
-</div>
+	<form action="/about" method="get">
+	<th class="clean"><button id="yellow" type="info" class="material-icons">info</button></th>
+	</form>
+	<form action="/login/logout" method="get">
+	<th class="clean"><button id="red" type="exit" class="material-icons">directions_run</button></th>
+	</form>
+</thead></table>
 <h1>Folyamatban</h1>
 <table>
 	<thead>
-  <th>Munkajegyszám</th>
-	<th>Rövid Leírás</th>
-	<th>Hozzáadás Dátuma</th>
+  <th style="width: 170px;">Munkajegyszám</th>
+	<th style="width: 580px;">Rövid Ismertető</th>
+	<th style="width: 170px;">Hozzáadás Dátuma</th>
 	</thead>
 <tbody> 
   {{#falseRow}}
@@ -23,10 +31,10 @@
 			<td>{{this.workNumber}}</td>
       <td>{{this.shortNote}}</td>
 			<td>{{this.timeStamp}}</td>
-			<td> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
-			<button type="submit" class="material-icons">done</button> </form> </div> </td>
-			<td> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
-			<button type="submit" class="material-icons">view_list</button> </form> </div> </td>
+			<td class="clean"> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
+			<button id="green" type="submit" class="material-icons">done</button> </form> </div> </td>
+			<td class="clean"> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
+			<button id="blue" type="submit" class="material-icons">view_list</button> </form> </div> </td>
     </tr>
   {{/falseRow}} 
 </tbody> 
@@ -34,9 +42,9 @@
 <h1>Kész</h1>
 <table>
 	<thead> 
-  <th>Munkajegyszám</th>
-	<th>Rövid Leírás</th>
-	<th>Hozzáadás dátuma</th>
+  <th style="width: 170px;">Munkajegyszám</th>
+	<th style="width: 580px;">Rövid Ismertető</th>
+	<th style="width: 170px;">Hozzáadás Dátuma</th>
 	</thead>
 <tbody> 
   {{#trueRow}}
@@ -44,10 +52,10 @@
 			<td>{{this.workNumber}}</td>
       <td>{{this.shortNote}}</td>
 			<td>{{this.timeStamp}}</td>
-			<td> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
-			<button type="submit" class="material-icons">cached</button> </form> </div> </td>
-			<td> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
-			<button type="submit" class="material-icons">view_list</button> </form> </div> </td>
+			<td class="clean"> <div class="makeItDone"> <form action="/list/{{this.id}}" method="get"> 
+			<button id="yellow" type="submit" class="material-icons">cached</button> </form> </div> </td>
+			<td class="clean"> <div class="upDateRecord"> <form action="/edit/{{this.id}}" method="get">
+			<button id="blue" type="submit" class="material-icons">view_list</button> </form> </div> </td>
     </tr>
   {{/trueRow}} 
 </tbody> 

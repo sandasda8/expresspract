@@ -3,10 +3,6 @@ body {
     background: url(http://sf.co.ua/2012/wallpaper-1850864.jpg) no-repeat center center fixed;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
 }
-.newRec {
-    position: relative;
-    left: 95%
-}
 h1 {
     margin: 10px 0 10px 0;
     padding: 5px;
@@ -18,28 +14,28 @@ h1 {
 table {
     margin: auto;
     position: relative;
-
+}
+table.butts {
+    margin: auto;
+    position: relative;
+    left: 43%;
 }
 th, td {
     padding: 5px;
+    border-radius: 5px;
+    background-color: grey;
     border: 1px solid black;
-}
-th {
-    background: #c3c5c9;
-}
-tr {
-    background: #c3c5c9;
-}
-tr:nth-child(odd) {
-    background: #eee;
+    text-align: center;
 }
 td {
-    color:#000;
-    text-align: center;
-    font-size: 16px;
+ background-color: white;
+}
+td.clean, th.clean {
+    border: 0;
+    background-color: transparent;
 }
 button {
-    border-radius: 8px;
+    border-radius: 5px;
 	background: black;
 	padding: 8px 12px 8px 12px;
     border-style: outset;
@@ -47,28 +43,37 @@ button {
     border-color: grey;
 	color: white;
 }
-button:hover{
+#red:hover{
     background: black;
     color: red;
 }
+#green:hover{
+    background: black;
+    color: green;
+}
+#blue:hover{
+    background: black;
+    color: blue;
+}
+#yellow:hover{
+    background: black;
+    color: yellow;
+}
 button:active {
     background: black;
-    padding: 8px 13px 8px 13px;
-    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 5px;
     border-style: inset;
     border-width: 2px;
     border-color: grey;
-	color: red;
+	color: white;
 }
 input {
     align-content: center;
     padding: 12px 10px 12px 10px;
     margin: 8px 8px;
-    border: 2px solid black;
-    border-radius: 8px;
-}
-.search_form{
-
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
   

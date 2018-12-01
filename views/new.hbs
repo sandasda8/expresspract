@@ -1,11 +1,16 @@
 <div class="log-form">
-	<h1>Új bejegyzés létrehozása</h1>
-	<form action="/new/insert" method="post">
-		<input type="text" name="workNumber" placeholder="Munkajegyszám" /><br>
-		<input type="text" name="shortNote" placeholder="Megjegyzés..." />
-		<button type="submit" class="material-icons">done</button>
-	</form>
-	<form action="/list" method="get">
-		<button type="submit" class="material-icons">reply</button>
-	</form>
+	<h1>Új bejegyzés létrehozása.</h1>
+	<table>
+		<tbody>
+			<form action="/new/insert" method="POST">
+				<tr>
+					<td class="clean"><input type="text" name="workNumber" placeholder="Munkajegyszám" style="width: 165px;"/></td>
+				</tr>
+				<tr>
+					<td class="clean"><textarea type="text" class="short" name="shortNote" placeholder="Rövid megjegyzés." maxlength="120" style="width:500px;height:58px;"></textarea></td>
+					<td class="clean"><button type="submit" class="material-icons">done</button></td>
+				</tr>
+			</form>
+		</tbody>
+	</table>
 </div>
